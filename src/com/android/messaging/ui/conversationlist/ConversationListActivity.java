@@ -42,10 +42,8 @@ public class ConversationListActivity extends AbstractConversationListActivity {
         actionBar.setTitle(getString(R.string.app_name));
         actionBar.setDisplayShowTitleEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(false);
-        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
-        actionBar.setBackgroundDrawable(new ColorDrawable(
-                getResources().getColor(R.color.action_bar_background_color)));
         actionBar.show();
+        actionBar.setElevation(2.0f);
         super.updateActionBar(actionBar);
     }
 

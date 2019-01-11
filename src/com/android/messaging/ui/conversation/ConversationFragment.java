@@ -1542,13 +1542,14 @@ public class ConversationFragment extends Fragment implements ConversationDataLi
 
     public void updateActionBar(final ActionBar actionBar) {
         if (mComposeMessageView == null || !mComposeMessageView.updateActionBar(actionBar)) {
-            updateActionAndStatusBarColor(actionBar);
+            //updateActionAndStatusBarColor(actionBar);
             // We update this regardless of whether or not the action bar is showing so that we
             // don't get a race when it reappears.
             actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
             actionBar.setDisplayHomeAsUpEnabled(true);
             // Reset the back arrow to its default
             actionBar.setHomeAsUpIndicator(0);
+            actionBar.setElevation(2.0f);
             View customView = actionBar.getCustomView();
             if (customView == null || customView.getId() != R.id.conversation_title_container) {
                 final LayoutInflater inflator = (LayoutInflater)

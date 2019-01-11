@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
     Copyright (C) 2015 The Android Open Source Project
 
     Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,32 +13,23 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-<merge xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <com.android.messaging.ui.ViewPagerTabs
         android:id="@+id/tab_strip"
+        style="@style/PagerTabHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textAllCaps="true"
         android:orientation="horizontal"
-        style="@style/PagerTabHeader" />
+        android:elevation="2dp"
+        android:textAllCaps="true" />
 
-    <FrameLayout
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-
-        <android.support.v4.view.ViewPager
-            android:id="@+id/pager"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_gravity="top"
-            android:background="@drawable/compose_chips_divider_gradient"/>
-
-    </FrameLayout>
-</merge>
+        android:layout_height="match_parent"/>
+</LinearLayout>

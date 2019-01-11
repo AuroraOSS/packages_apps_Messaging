@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
     Copyright (C) 2015 The Android Open Source Project
 
     Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,53 +13,60 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <!--
         Base application theme, dependent on API level. This theme is replaced
         by BugleBaseTheme from res/values-vXX/styles.xml on newer devices.
     -->
-    <style name="BugleBaseTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!--
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        -->
+    <style name="BugleBaseTheme" parent="Theme.AppCompat.Light">
+        <item name="apnPreferenceStyle">@style/ApnPreference</item>
     </style>
 
 
     <!-- Application theme. -->
     <style name="BugleTheme" parent="BugleBaseTheme">
-        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
-         <item name="android:dropDownListViewStyle">@style/DropDownListViewStyle</item>
-         <item name="colorPrimary">@color/action_bar_background_color</item>
-         <item name="colorPrimaryDark">@color/action_bar_background_color_dark</item>
-         <item name="colorAccent">@color/action_bar_background_color</item>
-         <item name="android:textColorHighlight">@color/text_highlight_color</item>
-         <item name="actionBarStyle">@style/BugleActionBar</item>
-         <item name="apnPreferenceStyle">@style/ApnPreference</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="android:textColorHighlight">@color/colorAccentTranslucent</item>
+        <item name="android:windowLightNavigationBar" tools:ignore="NewApi">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowBackground">@color/colorBackground</item>
+        <item name="actionBarSize">90dp</item>
     </style>
 
-    <style name="BugleTheme.ConversationActivity"
-        parent="@style/BugleTheme.ConversationActivityBase">
+    <style name="Widget.Custom.ActionBar" parent="Widget.AppCompat.ActionBar">
+        <item name="theme">@style/ThemeOverlay.Custom.ActionBar</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
     </style>
+
+    <style name="ThemeOverlay.Custom.ActionBar" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:letterSpacing">0.025</item>
+    </style>
+
+    <style name="BugleTheme.ConversationActivity" parent="@style/BugleTheme.ConversationActivityBase" />
 
     <style name="BugleTheme.ConversationActivityBase" parent="BugleTheme">
-        <item name="android:windowBackground">@color/conversation_background</item>
+        <item name="android:windowBackground">@color/colorBackground</item>
         <item name="windowActionBarOverlay">true</item>
-        <item name="android:fastScrollPreviewBackgroundLeft">@drawable/contacts_fastscroll_label_left</item>
-        <item name="android:fastScrollPreviewBackgroundRight">@drawable/contacts_fastscroll_label_right</item>
+        <item name="android:fastScrollPreviewBackgroundLeft">
+            @drawable/contacts_fastscroll_label_left
+        </item>
+        <item name="android:fastScrollPreviewBackgroundRight">
+            @drawable/contacts_fastscroll_label_right
+        </item>
     </style>
 
-    <style name="BugleTheme.DialogActivity" parent="@style/Theme.AppCompat.Light.Dialog">
-    </style>
+    <style name="BugleTheme.DialogActivity" parent="@style/Theme.AppCompat.Light.Dialog" />
 
     <style name="BugleTheme.ConversationListActivity" parent="BugleTheme">
         <item name="android:windowBackground">@android:color/background_light</item>
     </style>
 
     <style name="BugleTheme.ArchivedConversationListActivity" parent="BugleTheme.ConversationListActivity">
-        <item name="colorPrimary">@color/archived_conversation_action_bar_background_color</item>
-        <item name="colorPrimaryDark">@color/archived_conversation_action_bar_background_color_dark</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
     </style>
 
     <style name="BugleTheme.SettingsActivity" parent="BugleTheme">
@@ -76,20 +82,20 @@
         <item name="android:windowNoDisplay">true</item>
     </style>
 
-    <style name="BugleActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid">
+    <style name="BugleActionBar" parent="@style/Widget.AppCompat.Light.ActionBar">
         <item name="height">@dimen/action_bar_height</item>
         <item name="displayOptions">showTitle</item>
         <item name="titleTextStyle">@style/BugleActionBarTitleTextStyle</item>
     </style>
 
     <style name="BugleActionBarTitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
-      <item name="android:textColor">@color/action_bar_title_text_color</item>
-      <item name="android:textSize">@dimen/action_bar_text_size</item>
-      <item name="android:lines">1</item>
+        <item name="android:textSize">@dimen/action_bar_text_size</item>
+        <item name="android:lines">1</item>
+        <item name="android:letterSpacing">0.025</item>
     </style>
 
     <style name="ConversationActionBarTitleTextStyle" parent="BugleActionBarTitleTextStyle">
-      <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
     </style>
 
     <style name="BuglePhotoViewTheme" parent="PhotoViewTheme.Translucent">
@@ -133,12 +139,15 @@
         <item name="android:background">@null</item>
         <item name="android:scrollHorizontally">false</item>
         <item name="android:textCursorDrawable">@null</item>
-        <item name="android:inputType">textShortMessage|textAutoCorrect|textCapSentences|textMultiLine</item>
+        <item name="android:inputType">
+            textShortMessage|textAutoCorrect|textCapSentences|textMultiLine
+        </item>
     </style>
 
     <style name="ConversationComposeSubjectText" parent="ConversationComposeSendText">
         <item name="android:paddingLeft">18dp</item>
-        <item name="android:layout_marginLeft">@dimen/compose_message_subject_cancel_left_margin</item>
+        <item name="android:layout_marginLeft">@dimen/compose_message_subject_cancel_left_margin
+        </item>
     </style>
 
     <style name="ContactListItem">
@@ -162,10 +171,6 @@
     </style>
 
     <style name="RecipientEditTextView">
-        <item name="android:textSize">@dimen/recipient_edit_text_size</item>
-        <item name="android:textColor">@color/compose_contact_text</item>
-        <item name="android:textColorHint">@color/compose_contact_faint_text</item>
-        <item name="android:fontFamily">sans-serif</item>
         <item name="android:paddingLeft">4dp</item>
         <item name="android:paddingRight">4dp</item>
     </style>
@@ -173,7 +178,6 @@
     <style name="PagerTabHeader">
         <item name="android:textColor">@color/tab_text_color</item>
         <item name="android:textSize">@dimen/pager_tab_header_text_size</item>
-        <item name="android:background">@null</item>
         <item name="android:textStyle">bold</item>
     </style>
 
@@ -353,7 +357,7 @@
     </style>
 
     <style name="DropDownListViewStyle">
-      <item name="android:dividerHeight">0dp</item>
+        <item name="android:dividerHeight">0dp</item>
     </style>
 
     <style name="ComposeMessageViewTextCounterStyle">
@@ -608,21 +612,22 @@
         <item name="android:paddingLeft">40dp</item>
         <item name="android:paddingRight">40dp</item>
         <item name="android:textSize">16sp</item>
-        <item name="android:textColor">@android:color/white</item>
         <item name="android:fontFamily">roboto-regular</item>
     </style>
+
     <style name="PromoScreenTextStyle.CenterAligned">
         <item name="android:textAlignment">center</item>
     </style>
+
     <style name="PromoScreenButtonStyle">
         <item name="android:textSize">14sp</item>
         <item name="android:fontFamily">roboto-medium</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:textStyle">bold</item>
         <item name="android:background">?android:attr/selectableItemBackground</item>
-        <item name="android:textColor">@android:color/white</item>
         <item name="android:gravity">center</item>
     </style>
+
     <style name="DirectoryHeaderStyle">
         <item name="android:paddingLeft">@dimen/directory_header_padding_start</item>
         <item name="android:paddingStart">@dimen/directory_header_padding_start</item>

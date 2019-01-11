@@ -101,7 +101,7 @@ public class ConversationDrawables {
         mIncomingAudioButtonColor =
                 resources.getColor(R.color.message_audio_button_color_incoming);
         mSelectedBubbleColor = resources.getColor(R.color.message_bubble_color_selected);
-        mThemeColor = resources.getColor(R.color.primary_color);
+        mThemeColor = resources.getColor(R.color.colorAccent);
     }
 
     public Drawable getBubbleDrawable(final boolean selected, final boolean incoming,

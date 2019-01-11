@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
     Copyright (C) 2015 The Android Open Source Project
 
     Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,8 +13,7 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -23,11 +21,11 @@
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
-        android:layout_height="wrap_content"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
-        android:background="@color/action_bar_background_color"
-        app:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+        app:theme="@style/Widget.Custom.ActionBar">
 
         <com.android.messaging.ui.MaxHeightScrollView
             android:layout_width="match_parent"
@@ -41,16 +39,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:minHeight="@dimen/compose_message_contacts_height"
-                android:popupBackground="@drawable/contact_popup_background"
                 android:dropDownWidth="match_parent"
                 android:hint="@string/recipient_hint"
+                android:minHeight="@dimen/compose_message_contacts_height"
+                android:popupBackground="@drawable/contact_popup_background"
                 app:avatarPosition="start"
                 app:chipHeight="@dimen/compose_message_chip_height"
                 app:chipPadding="@dimen/compose_message_chip_padding"
                 app:imageSpanAlignment="baseline"
-                app:unselectedChipTextColor="@color/chips_text_color"
-                app:unselectedChipBackgroundColor="@color/chips_background_color">
+                app:unselectedChipBackgroundColor="@color/chips_background_color"
+                app:unselectedChipTextColor="@color/chips_text_color">
 
                 <!-- Put focus on the chips view by default so soft keyboard can be shown -->
                 <requestFocus />
@@ -64,16 +62,17 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
+
         <com.android.messaging.ui.CustomHeaderViewPager
             android:id="@+id/contact_pager"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
 
         <View
             android:id="@+id/compose_contact_divider"
             android:layout_width="match_parent"
-            android:layout_height="4dp"
+            android:layout_height="2dp"
             android:layout_gravity="top"
-            android:background="@drawable/compose_chips_divider_gradient"/>
+            android:background="@drawable/compose_chips_divider_gradient" />
     </FrameLayout>
 </LinearLayout>

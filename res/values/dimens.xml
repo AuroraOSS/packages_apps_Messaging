@@ -16,7 +16,7 @@
 -->
 <resources>
 
-    <dimen name="action_bar_height">56dp</dimen>
+    <dimen name="action_bar_height">90dp</dimen>
     <dimen name="action_bar_elevation">8dp</dimen>
     <dimen name="action_bar_text_size">20sp</dimen>
     <dimen name="conversation_message_text_size">16sp</dimen>
@@ -50,8 +50,8 @@
     <dimen name="mediapicker_default_chooser_height">215dp</dimen>
     <dimen name="compose_message_contacts_container_margin">4dp</dimen>
     <dimen name="compose_message_contacts_height">42dp</dimen>
-    <dimen name="compose_message_chip_height">36dp</dimen>
-    <dimen name="compose_message_chip_padding">3dp</dimen>
+    <dimen name="compose_message_chip_height">32dp</dimen>
+    <dimen name="compose_message_chip_padding">4dp</dimen>
     <dimen name="compose_message_fields_horizontal_margin">16dp</dimen>
     <dimen name="compose_message_font_size">16sp</dimen>
     <dimen name="compose_message_attachment_padding_sides">20dp</dimen>
@@ -113,9 +113,9 @@
     <dimen name="fab_size">60dp</dimen>
     <dimen name="fab_padding_bottom">4dp</dimen>
     <dimen name="fab_elevation">2dp</dimen>
-    <dimen name="fab_elevation_pressed">6dp</dimen>
-    <dimen name="fab_bottom_margin">12dp</dimen>
-    <dimen name="fab_left_right_margin">14dp</dimen>
+    <dimen name="fab_elevation_pressed">4dp</dimen>
+    <dimen name="fab_bottom_margin">16dp</dimen>
+    <dimen name="fab_left_right_margin">16dp</dimen>
     <dimen name="message_text_counter_size">12sp</dimen>
 
     <dimen name="vcard_detail_group_indicator_width">40dp</dimen>
