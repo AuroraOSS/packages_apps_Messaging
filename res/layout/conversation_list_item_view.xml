@@ -23,7 +23,7 @@
         android:id="@+id/crossSwipeBackground"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/swipe_shadow"
+        android:background="?android:attr/colorPrimaryDark"
         android:baselineAligned="false"
         android:gravity="center_vertical|start"
         android:orientation="horizontal"
@@ -35,9 +35,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@null"
-            android:gravity="center_vertical|left"
+            android:gravity="center_vertical|start"
             android:importantForAccessibility="no"
-            android:src="@drawable/ic_archive_small_dark"
+            android:src="@drawable/ic_delete_small_dark"
             android:visibility="gone" />
 
         <FrameLayout
@@ -49,7 +49,7 @@
             android:id="@+id/crossSwipeArchiveIconRight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|right"
+            android:layout_gravity="center_vertical|end"
             android:contentDescription="@null"
             android:importantForAccessibility="no"
             android:src="@drawable/ic_archive_small_dark"
@@ -67,6 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?android:attr/selectableItemBackground"
+            android:baselineAligned="false"
             android:clipToPadding="false"
             android:duplicateParentState="true"
             android:orientation="horizontal"

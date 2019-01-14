@@ -531,24 +531,25 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
                 mCrossSwipeArchiveLeftImageView.setVisibility(GONE);
                 mCrossSwipeArchiveRightImageView.setVisibility(VISIBLE);
             }
-            mSwipeableContainer.setBackgroundResource(R.drawable.swipe_shadow_drag);
+            mSwipeableContainer.setBackgroundResource(R.color.colorPrimary);
         }
     }
 
-    public void onSwipeComplete() {
+    public void onSwipeComplete(boolean isSwipeRight) {
         final String conversationId = mData.getConversationId();
         UpdateConversationArchiveStatusAction.archiveConversation(conversationId);
-
-        final Runnable undoRunnable = new Runnable() {
-            @Override
-            public void run() {
-                UpdateConversationArchiveStatusAction.unarchiveConversation(conversationId);
-            }
-        };
-        final String message = getResources().getString(R.string.archived_toast_message, 1);
-        UiUtils.showSnackBar(getContext(), getRootView(), message, undoRunnable,
-                SnackBar.Action.SNACK_BAR_UNDO,
-                mHostInterface.getSnackBarInteractions());
+        if(isSwipeRight) {
+            mData.deleteConversation();
+            UiUtils.showSnackBar(getContext(), getRootView(),
+                    getResources().getString(R.string.conversation_deleted));
+        }
+        else {
+            final Runnable undoRunnable = () -> UpdateConversationArchiveStatusAction.unarchiveConversation(conversationId);
+            final String message = getResources().getString(R.string.archived_toast_message, 1);
+            UiUtils.showSnackBar(getContext(), getRootView(), message, undoRunnable,
+                    SnackBar.Action.SNACK_BAR_UNDO,
+                    mHostInterface.getSnackBarInteractions());
+        }
     }
 
     private void setShortAndLongClickable(final boolean clickable) {

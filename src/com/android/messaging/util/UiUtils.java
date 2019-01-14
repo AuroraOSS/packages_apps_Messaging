@@ -113,6 +113,14 @@ public class UiUtils {
     }
 
     public static void showSnackBar(final Context context, @NonNull final View parentView,
+                                    final String message) {
+        SnackBarManager.get()
+                .newBuilder(parentView)
+                .setText(message)
+                .show();
+    }
+
+    public static void showSnackBar(final Context context, @NonNull final View parentView,
             final String message, @Nullable final Runnable runnable, final int runnableLabel,
             @Nullable final List<SnackBarInteraction> interactions) {
         Assert.notNull(context);
