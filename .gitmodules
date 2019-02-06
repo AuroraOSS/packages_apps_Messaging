@@ -1,0 +1,9 @@
+[submodule "modules/colorpicker"]
+	path = modules/colorpicker
+	url = https://github.com/AuroraOSS/android_frameworks_opt_colorpicker.git
+[submodule "modules/chips"]
+	path = modules/chips
+	url = https://github.com/AuroraOSS/android_frameworks_opt_chips.git
+[submodule "modules/photoviewer"]
+	path = modules/photoviewer
+	url = https://github.com/AuroraOSS/android_frameworks_opt_photoviewer.git
