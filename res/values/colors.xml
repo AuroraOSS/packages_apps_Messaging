@@ -34,9 +34,9 @@
     <color name="conversation_compose_divider_start">#44000000</color>
 
     <color name="message_text">#000000</color>
-    <color name="timestamp_text_outgoing">#99323232</color>
+    <color name="timestamp_text_outgoing">#99ffffff</color>
     <color name="timestamp_text_incoming">#99ffffff</color>
-    <color name="timestamp_text_failed">#99ff0000</color>
+    <color name="timestamp_text_failed">#99ffffff</color>
     <color name="compose_send_text_color">#000000</color>
 
     <color name="message_title_text">#ff323232</color>
@@ -44,28 +44,28 @@
     <color name="message_info_text">#99ffffff</color>
     <color name="message_info_text_incoming_download_failed">#6a6a6a</color>
     <color name="message_download_failed_timestamp_text">#007fce</color>
-    <color name="message_failed_timestamp_text">#99ff0000</color>
-    <color name="message_action_status_text">#ffffffff</color>
+    <color name="message_failed_timestamp_text">#99ffffff</color>
+    <color name="message_action_status_text">@color/colorWhite</color>
     <color name="message_action_info_text">#99ffffff</color>
-    <color name="message_action_timestamp_text">#ffffffff</color>
+    <color name="message_action_timestamp_text">@color/colorWhite</color>
 
     <color name="background_item_transparent">@android:color/transparent</color>
     <color name="background_item_activated">#670099cc</color>
     <color name="background_item_selected">#cc0099cc</color>
     <color name="background_item_pressed">#6733b5e5</color>
 
-    <color name="subject_editor_bubble">#ffffffff</color>
-    <color name="message_text_color_incoming">#ffffffff</color>
+    <color name="subject_editor_bubble">@color/colorWhite</color>
+    <color name="message_text_color_incoming">@color/colorWhite</color>
     <color name="message_text_color_incoming_download_failed">#6a6a6a</color>
-    <color name="message_text_color_outgoing">#ff323232</color>
+    <color name="message_text_color_outgoing">@color/colorWhite</color>
     <color name="conversation_background">#eeeeee</color>
     <color name="conversation_edge_effect">#9d9d9d</color>
     <color name="compose_message_send_color">@color/colorAccent</color>
     <color name="compose_message_send_color_pressed">#999999</color>
-    <color name="message_bubble_color_outgoing">#aed581</color>
+    <color name="message_bubble_color_outgoing">@color/colorAccent</color>
     <color name="message_error_bubble_color_incoming">#e2e2e2</color>
-    <color name="message_audio_button_color_incoming">#ffffffff</color>
-    <color name="message_bubble_color_selected">@color/colorAccent</color>
+    <color name="message_audio_button_color_incoming">@color/colorWhite</color>
+    <color name="message_bubble_color_selected">#014640</color>
     <color name="message_image_selected_tint">@color/colorAccentTranslucent</color>
     <color name="generic_video_icon">#ff808080</color>
 
@@ -110,8 +110,8 @@
     <color name="audio_progress_bar_color">@color/colorAccent</color>
 
     <color name="notification_sender_text">#9A9A9A</color>
-    <color name="notification_secondary_text">#FFFFFF</color>
-    <color name="notification_tertiary_text">#FFFFFF</color>
+    <color name="notification_secondary_text">@color/colorWhite</color>
+    <color name="notification_tertiary_text">@color/colorWhite</color>
     <color name="wearable_notification_participants_count">#a2a2a2</color>
     <color name="notification_accent_color">@color/colorAccent</color>
     <color name="notification_warning_color">#ff0000</color>
@@ -138,7 +138,7 @@
     <color name="sim_selector_text_secondary">#999999</color>
     <color name="sim_selector_background_end">#cceeeeee</color>
     <color name="sim_selector_background_start">#ffeeeeee</color>
-    <color name="sim_indicator_color_light">#ffffff</color>
+    <color name="sim_indicator_color_light">@color/colorWhite</color>
     <color name="sim_indicator_color_dark">#323232</color>
 
     <color name="text_highlight_color">@color/colorAccentTranslucent</color>
@@ -157,16 +157,16 @@
     <color name="widget_text_color">#424242</color>
     <color name="widget_incoming_text_color">@android:color/white</color>
     <color name="widget_outgoing_text_color">#424242</color>
-    <color name="widget_background_color">#ffffff</color>
+    <color name="widget_background_color">@color/colorWhite</color>
     <color name="ripple_material_light">#40000000</color>
-    <color name="widget_conversation_title_color">#FFFFFF</color>
+    <color name="widget_conversation_title_color">@color/colorWhite</color>
 
     <color name="attachment_chooser_audio_background">#eeeeee</color>
     <color name="attachment_chooser_vcard_background">#eeeeee</color>
 
     <color name="fastscroll_track_color">#1e000000</color>
     <color name="fastscroll_thumb_color">#42000000</color>
-    <color name="fastscroll_preview_text_color">#ffffff</color>
+    <color name="fastscroll_preview_text_color">@color/colorWhite</color>
 
     <color name="google_gray">#F1F1F1</color>
 </resources>

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
     Copyright (C) 2015 The Android Open Source Project
 
     Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,9 +15,10 @@
 -->
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
-         <shape>
-             <solid android:color="@color/subject_editor_bubble" />
-             <corners android:radius="3dp" />
-         </shape>
+        <shape>
+            <padding android:left="8dp" android:right="8dp"/>
+            <solid android:color="@color/subject_editor_bubble" />
+            <corners android:radius="8dp" />
+        </shape>
     </item>
 </layer-list>
