@@ -15,8 +15,8 @@
     limitations under the License.
 -->
 <resources>
-    <color name="colorAccent">#01998C</color>
-    <color name="colorAccentTranslucent">#5501998C</color>
+    <color name="colorAccent">#536DFE</color>
+    <color name="colorAccentTranslucent">#55536DFE</color>
     <color name="colorPrimary">#FFF</color>
     <color name="colorPrimaryDark">#EEE</color>
     <color name="colorBackground">#FDFDFD</color>
